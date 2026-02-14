@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
-import { StarRating } from "../StarRate";
+import { StarRating } from "../StarRating";
 import BuyOrAddCart from "../ProductAction/BuyOrAddCart";
 
 export  default function ProductCard() {
@@ -63,7 +63,6 @@ export  default function ProductCard() {
           <StarRating rating={product.rating} count={product.reviewCount} />
         </div>
           <BuyOrAddCart />
-        
       </div>
     </div>
   );

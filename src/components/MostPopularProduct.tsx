@@ -4,8 +4,8 @@ import BuyOrAddCart from "./ProductAction/BuyOrAddCart";
 
 export default function MostPopularProduct() {
   return (
-    <div className="px-4 py-12 sm:px-6 lg:px-8 bg-gray-100">
-      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mx-20 px-3">
+    <div className="px-4 py-16 lg:py-24 sm:px-6 lg:px-8 bg-gray-100 min-h-[60vh] flex items-center">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mx-auto px-3 max-w-7xl w-full">
         {/* Text Content */}
         <div className="flex-1 min-w-0">
           <span className="inline-block px-3 py-1 rounded-full bg-gray-100 text-xs font-medium text-gray-600 uppercase tracking-wide">

@@ -4,7 +4,44 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiSearch, FiHeart, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 
+interface IRightIcons {
+  setIsMenuOpen: (value: boolean) => void;
+}
+
+export function RightIcons({ setIsMenuOpen }: IRightIcons) {
+  console.log("Rendered RightIcons from client");
+  return (
+    <div className="md:hidden py-4 border-t border-gray-100">
+      <div className="flex flex-col space-y-3">
+        <Link
+          href="/"
+          className="font-medium text-gray-700 hover:text-gray-900 py-2"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className="font-medium text-gray-700 hover:text-gray-900 py-2"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          About
+        </Link>
+        <Link
+          href="/contact"
+          className="font-medium text-gray-700 hover:text-gray-900 py-2"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Contact
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export default function Header() {
+  console.log("Header RightIcons from client");
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Toggle mobile menu
@@ -29,7 +66,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Nav */}
+          {/*  Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -70,7 +107,7 @@ export default function Header() {
               className="p-2 rounded-full text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300 relative"
             >
               <FiShoppingCart className="w-5 h-5" />
-              {/* Example badge — remove if not needed */}
+              {/*  badge  */}
               <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 2
               </span>
@@ -91,33 +128,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu (collapsed by default) */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <div className="flex flex-col space-y-3">
-              <Link
-                href="/"
-                className="font-medium text-gray-700 hover:text-gray-900 py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <a
-                href="/about"
-                className="font-medium text-gray-700 hover:text-gray-900 py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-              <a
-                href="/contact"
-                className="font-medium text-gray-700 hover:text-gray-900 py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        )}
+        {isMenuOpen && <RightIcons setIsMenuOpen={setIsMenuOpen} />}
       </div>
     </header>
   );

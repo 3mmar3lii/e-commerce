@@ -1,6 +1,5 @@
 import { FiStar } from "react-icons/fi";
 
-
 export const StarRating = ({ rating, count }: { rating: number; count: number }) => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
