@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
 import MostPopularProduct from "@/components/MostPopularProduct";
+import ShowcaseBanner from "@/components/ShowcaseBanner";
 
 export default function Home() {
   return (
     <main>
-      <Header />
       <MostPopularProduct />
+  <ShowcaseBanner />      
     </main>
   );
 }
