@@ -1,8 +1,5 @@
-@import "tailwindcss";
-
-body {
-  @apply font-sans;
-}
+@import '../styles/fonts.css';
+@import '../styles/tailwind.css';
 
 input:focus {
   @apply outline-none;
