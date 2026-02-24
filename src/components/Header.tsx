@@ -30,7 +30,9 @@ export function Header() {
   const isAuthPage = pathName === "/login" || pathName === "/signup";
   if (isAuthPage) return null;
 
-  const handleSearch = (e: React.FormEvent) => {};
+  const handleSearch = (e: React.FormEvent) => {
+    console.log("The pathName is", e);
+  };
 
   const navLinks = [
     { label: "Home", path: "/" },

@@ -7,11 +7,11 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "ik.imagekit.io", // ده الدومين الافتراضي بتاع ImageKit
         port: "",
-        pathname: "/**", // معناها اسمح بأي مسار جوة الدومين ده
+        pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "images.unsplash.com", // ده اللي هيحل الإيرور اللي في الصورة
+        hostname: "images.unsplash.com",  
         port: "",
         pathname: "/**",
       },
@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     turbopackFileSystemCacheForDev: true,
+    
   },
   /* config options here */
   reactCompiler: true,
