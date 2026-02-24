@@ -13,8 +13,8 @@ function HeroSection() {
         <ImageWithFallback
           src={PRODUCT_IMAGES.hero}
           alt="Hero"
-          width={600}
-          height={400}
+          width={2000}
+          height={1080}
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-linear-to-r from-[#0A0A0B] via-[#0A0A0B]/80 to-transparent" />
@@ -56,10 +56,7 @@ function HeroSection() {
                 </GradientButton>
               </Link>
               <Link href={"/shop"}>
-                <GradientButton
-                  variant="outlined"
-                  size="lg"
-                >
+                <GradientButton variant="outlined" size="lg">
                   Browse Collections
                 </GradientButton>
               </Link>
