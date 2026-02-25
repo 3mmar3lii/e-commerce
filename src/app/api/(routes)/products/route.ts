@@ -1,3 +1,4 @@
+// this file is just for demo for now => api rouutes 
 import { NextResponse } from "next/server";
 export async function GET() {
   try {

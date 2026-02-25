@@ -240,19 +240,6 @@ export default function SignUpPage() {
               <span className="text-[#71717A] text-xs">or</span>
               <div className="flex-1 h-px bg-white/6" />
             </div>
-
-            {/* Social */}
-            <div className="grid grid-cols-2 gap-3">
-              {["Google", "Apple"].map((provider) => (
-                <button
-                  key={provider}
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-white/6 text-[#A1A1AA] text-sm hover:bg-white/5 hover:border-white/10 transition-all cursor-pointer"
-                >
-                  {provider}
-                </button>
-              ))}
-            </div>
-
             <p className="text-center mt-6 text-[#71717A] text-sm">
               Already have an account?{" "}
               <Link href="/login" className="text-[#A78BFA] hover:underline">
