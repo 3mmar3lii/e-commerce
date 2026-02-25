@@ -1,7 +1,6 @@
 "use server";
 
 import { IResponseLogin } from "@/types/Login.type";
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function Login(formData: FormData) {
@@ -33,15 +32,7 @@ export async function Login(formData: FormData) {
   if (!data.success) {
     throw new Error("Invalid credentials");
   }
-  const cookieStore = await cookies();
-
-  cookieStore.set("token", data.token, {
-    httpOnly: true,
-    secure: true,
-    sameSite: "lax",
-    path: "/",
-  });
-
+  // backend handle & set cookies token 
   redirect("/");
 }
 
@@ -76,5 +67,12 @@ export async function SignUp(formData: FormData) {
     }
     const data = response.json();
     return data;
-  } catch (err) {}
+  } catch (err) {
+    console.log("Error ",err);
+    throw new Error("Error");
+  }
+}
+
+export async function ForgetPassword() {
+  
 }
